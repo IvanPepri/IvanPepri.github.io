@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum 10/2025</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="portada">
+        <img src="assets/foto-perfil.jpg" alt="Tu Foto de Perfil" class="foto-principal">
+        <h1>Iván Pérez Prieto</h1>
+        <h2>Ingeniero en Tecnologías de la Información Geoespacial</h2>
+    </header>
+
+    <main class="container">
+        
+        <section id="contacto" class="card">
+            <h2>Contacto</h2>
+            <div class="botones-contacto">
+                <a href="mailto:ivan.pepri@gmail.com" class="btn-contacto">
+                    <i class="fas fa-envelope"></i> Correo Electrónico
+                </a>
+                <a href="tel:+34651369523" class="btn-contacto">
+                    <i class="fas fa-phone"></i> Teléfono de Contacto
+                </a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Arroyomolinos,+Madrid" target="_blank" class="btn-contacto">
+                    <i class="fas fa-map-marker-alt"></i> Arroyomolinos, Madrid
+                </a>
+                <a href="https://www.linkedin.com/in/ivan-perez-aa0343294/" target="_blank" class="btn-contacto">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </section>
+
+        <div class="grid-container">
+
+            <section id="info-personal" class="card">
+                <h2>Información Personal</h2>
+                <ul>
+                    <li>Edad: <span id="edad"></span> años</li>
+                    <li>Carnet de conducir B</li>
+                    <li>Coche propio</li>
+                    <li>Carnet de manipulador de alimentos</li>
+                </ul>
+            </section>
+
+            <section id="soft-skills" class="card">
+                <h2>Soft Skills</h2>
+                <ul>
+                    <li>Trabajo en equipo</li>
+                    <li>Comunicación eficaz</li>
+                    <li>Capacidad de liderazgo</li>
+                    <li>Organización y planificación</li>
+                    <li>Capacidad analítica</li>
+                    <li>Responsabilidad profesional</li>
+                    <li>Aprendizaje rápido</li>
+                    <li>Adaptabilidad</li>
+                    
+                </ul>
+            </section>
+            
+        </div>
+
+        <section id="experiencia" class="card">
+            <h2>Experiencia Laboral</h2>
+            <p>Haz click en una imagen para ver más detalles.</p>
+            <div class="experiencia-container">
+                
+                <article class="experiencia-item">
+                    <h3>Ayudante de Cocina</h3>
+                    <img src="images/funciones-de-un-cocinero.jpg" alt="Experiencia como cocinero" 
+                         class="experiencia-img" data-job="cocinero">
+                </article>
+                <article class="experiencia-item">
+                    <h3>Profesor particular </h3>
+                    <img src="images/istockphoto-1145625080-170667a.jpg" alt="Experiencia como profesor" 
+                         class="experiencia-img" data-job="profesor">
+                </article>
+
+            </div>
+        </section>
+
+        <section id="formacion" class="card">
+            <h2>Formación Académica</h2>
+            <ul>
+                <li>Educación Secundaria Obligatoria (ESO) - I.E.S Gonzalo Chacón (Arroyomolinos)</li>
+                <li>Bachillerato de Ciencias y Tecnología - I.E.S Gabriela Mistral (Arroyomolinos)</li>
+                <li>Grado en Ingeniería de las Tecnologías de la Información Geoespacial - Universidad Politécnica de Madrid. 
+                <br>Escuela Técnica Superior de Ingenieros en Topografía, Geodesia y Cartografía.<br>Actualmente cursando 4º curso</li>
+            </ul>
+        </section>
+
+        <div class="grid-container">
+            
+            <section id="herramientas" class="card">
+                <h2>Herramientas Software</h2>
+                <div class="lista-pills">
+                    <span>GIS (ArcGIS, QGIS)</span>
+                    <span>Python</span>
+                    <span>SQL (PostgreSQL/PostGIS)</span>
+                    <span>JavaScript</span>
+                    <span>HTML & CSS</span>
+                    <span>R & MATLAB</span>
+                    <span>Git & GitHub</span>
+                    <span>OFFICE</span>
+                    <span>BIGDATA (POWERBI)</span>
+                </div>
+            </section>
+
+            <section id="idiomas" class="card">
+                <h2>Idiomas</h2>
+                <ul>
+                    <li>Español (Nativo)</li>
+                    <li>Inglés (Nivel B2)</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <div id="modal-backdrop">
+        <div id="modal-content">
+            <span id="close-modal">&times;</span> <div id="modal-body">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
