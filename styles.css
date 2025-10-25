@@ -1,0 +1,275 @@
+/* --- TEMA 5: "CRISTAL CLARO" (Light Mode Glassmorphism) --- */
+
+/* --- 1. Importar la fuente "Poppins" --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+/* --- ESTILOS GLOBALES --- */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    
+    /* Fondo degradado claro, sutil y profesional */
+    background-color: #f4f7ff; /* Color base */
+    background-image: linear-gradient(135deg, #f4f7ff 0%, #e0e7ff 100%);
+    background-attachment: fixed; /* Fija el degradado */
+    
+    color: #333; /* Texto principal oscuro */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* --- ESTILO DE TARJETA (El "Cristal Claro") --- */
+.card {
+    /* Fondo de cristal, más opaco para ser legible sobre fondo claro */
+    background-color: rgba(255, 255, 255, 0.6);
+    
+    /* El efecto "esmerilado" (desenfoque del fondo) */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Para Safari */
+    
+    /* Borde sutil */
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    
+    /* Sombra suave para dar profundidad */
+    box-shadow: 0 8px 32px 0 rgba(100, 100, 150, 0.15);
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    /* Un color de acento púrpura/índigo fuerte */
+    color: #4338ca; 
+    border-bottom: 2px solid rgba(67, 56, 202, 0.1);
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* --- 1. PORTADA --- */
+.portada {
+    text-align: center;
+    padding: 40px 20px;
+    background: none; /* Integrado con el fondo del body */
+    color: #333; /* Texto oscuro */
+}
+
+.portada .foto-principal {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    
+    /* Sombra "glow" (brillo) con el color de acento */
+    box-shadow: 0 0 25px 5px rgba(67, 56, 202, 0.2);
+    
+    /* Animación sutil para que "respire" */
+    animation: pulseGlow 3s infinite alternate;
+}
+
+.portada h1 {
+    margin: 10px 0 5px 0;
+    font-size: 2.8em;
+    font-weight: 700;
+    color: #111; /* Título bien oscuro */
+}
+
+.portada h2 {
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: 400; /* Más fino para contraste */
+    color: #555;
+    border: none;
+}
+
+/* --- 2. CONTACTO (Botones con degradado) --- */
+.botones-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn-contacto {
+    text-decoration: none;
+    color: white;
+    /* Degradado vibrante que resalta en fondos claros */
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(106, 17, 203, 0.2);
+}
+
+.btn-contacto:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(106, 17, 203, 0.4);
+}
+
+.btn-contacto i {
+    margin-right: 8px;
+}
+
+/* --- 4. HERRAMIENTAS (Pills) --- */
+.lista-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.lista-pills span {
+    background: rgba(67, 56, 202, 0.1); /* Fondo con el color de acento */
+    color: #4338ca; /* Texto con el color de acento */
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: 500;
+    border: 1px solid rgba(67, 56, 202, 0.2);
+}
+
+/* --- 5. EXPERIENCIA (Imágenes con borde animado) --- */
+.experiencia-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.experiencia-item {
+    text-align: center;
+    width: 45%;
+}
+
+.experiencia-img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.experiencia-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    /* Borde que se activa con el degradado */
+    border-image: linear-gradient(45deg, #6a11cb, #2575fc) 1;
+}
+
+/* --- Contenedor GRID (Para 2 columnas) --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* --- ESTILOS DEL MODAL (Ventana emergente) --- */
+#modal-backdrop {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Desenfoque del fondo */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-visible {
+    display: flex !important;
+    animation: fadeIn 0.3s;
+}
+
+#modal-content {
+    /* El modal también es de "cristal claro" */
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 1);
+    color: #333; /* Texto oscuro */
+
+    padding: 30px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 700px;
+    position: relative;
+    animation: slideIn 0.3s;
+    box-shadow: 0 8px 32px 0 rgba(100, 100, 150, 0.15);
+}
+
+#modal-content h2 { color: #4338ca; }
+
+#close-modal {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#close-modal:hover {
+    color: #000;
+}
+
+/* --- Animaciones --- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Animación de "respirar" para la foto de perfil */
+@keyframes pulseGlow {
+    from {
+        box-shadow: 0 0 25px 5px rgba(67, 56, 202, 0.1);
+    }
+    to {
+        box-shadow: 0 0 35px 10px rgba(67, 56, 202, 0.3);
+    }
+}
+
+/* --- RESPONSIVE DESIGN (Móviles) --- */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .experiencia-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .experiencia-item {
+        width: 100%;
+    }
+    .botones-contacto {
+        flex-direction: column;
+    }
+}
