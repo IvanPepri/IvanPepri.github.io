@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Personal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="formacion.html" class="nav-link">Formación</a>
+            <a href="experiencia.html" class="nav-link active">Desarrollo</a>
+            <a href="contacto.html" class="nav-link">Más Info y Contacto</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        <section id="experiencia" class="card">
+            <h2>Desarrollo Personal</h2>
+            <p>
+            Además de mi formación en la universidad, he adquirido diversas habilidades profesionales y sociales gracias a conocer el entorno laboral en diversos sectores.</p>
+            <p>
+            Me considero una persona proactiva, con capacidad de trabajo en equipo en base a la organización, planificación y comunicación efectiva. Soy una persona responsable,
+            con adaptabilidad al entorno y con capacidad de liderazgo.</p>
+            <p>
+            Soy un aficionado al deporte y me gusta ser competitivo, comprometido pero con respeto y compañerismo. 
+            </p><br>
+            <p style="text-align: center;"><span style="font-size: 0.8em;">Haz click en la imagen para ver más detalles.</span></p>
+            <div class="experiencia-container">
+                <article class="experiencia-item">
+                    <h3>Ayudante de Cocina</h3>
+                    <img src="images/funciones-de-un-cocinero.jpg" alt="Experiencia como cocinero" 
+                         class="experiencia-img" data-job="cocinero">
+                </article>
+                <article class="experiencia-item">
+                    <h3>Profesor particular </h3>
+                    <img src="images/istockphoto-1145625080-170667a.jpg" alt="Experiencia como profesor" 
+                         class="experiencia-img" data-job="profesor">
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="modal-backdrop">
+        <div id="modal-content">
+            <span id="close-modal">×</span> 
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
